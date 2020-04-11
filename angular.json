@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Customer-Manager"
+    }
+  },
+  "defaultProject": "Customer-Manager",
+  "cli": {
+    "analytics": "ebbb94d3-62e8-4992-8a45-ecdf3074b28a"
+  }
 }
