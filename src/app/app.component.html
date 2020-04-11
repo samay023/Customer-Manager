@@ -1,1 +1,11 @@
-<h1>Customer Manager</h1>
+<nb-layout>
+  <nb-sidebar>
+        <h5>Customer Manager</h5>
+        <nb-menu [items]="items"></nb-menu>
+  </nb-sidebar>
+  
+  <nb-layout-column>
+    <app-dashboard></app-dashboard>
+  </nb-layout-column>
+
+</nb-layout>
