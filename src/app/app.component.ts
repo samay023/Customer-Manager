@@ -13,10 +13,12 @@ export class AppComponent {
     {
       title: 'Dashboard',
       icon: 'home-outline',
+      link:'/dashboard'
     },
     {
       title: 'Customers',
       icon: 'people-outline',
+      link:'/customers'
     },
     {
       title: 'Orders (Pending)',
