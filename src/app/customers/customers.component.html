@@ -1,1 +1,30 @@
-<p>customers works!</p>
+<nb-layout>
+    <nb-layout-header class="title"><h1>Customer List</h1></nb-layout-header>
+    <nb-layout-column>
+        <nb-card size="large">
+            <nb-card-body>
+              <nb-tabset>
+                <nb-tab tabTitle="Card View" tabIcon="person-outline" responsive>
+                    <nb-card accent="primary" style="cursor: pointer;" class="card-col" [routerLink]="['/customer/', customer.id]" *ngFor="let customer of customerList">
+                        <nb-card-body>
+                          <nb-user style="width: 240px;" shape="round" [name]="customer.name" [title]="customer.company.name"></nb-user>
+                        </nb-card-body>
+                    </nb-card>
+                </nb-tab>
+                <nb-tab tabTitle="List View" tabIcon="list-outline" responsive>
+                    <nb-list>
+                        <nb-list-item style="padding-bottom: 10px;" *ngFor="let customer of customerList">
+                        <nb-user [name]="customer.name" [title]="customer.company.name"></nb-user>
+                        </nb-list-item>
+                    </nb-list>
+                </nb-tab>
+                <nb-tab tabTitle="Add a new Customer" tabIcon="person-add-outline" responsive>
+                  <p>Add a new Customer</p>
+                </nb-tab>
+              </nb-tabset>
+          
+            </nb-card-body>
+          </nb-card>
+    </nb-layout-column>
+
+  </nb-layout>
