@@ -1,1 +1,39 @@
-<p>customer works!</p>
+<nb-layout>
+    <nb-layout-header class="title"><h1>Customer Information</h1></nb-layout-header>
+    <nb-layout-column>
+        <nb-card size="large">
+            <nb-card-body>
+                <div *ngIf="customer$ | async as customer else spinner">
+                    <nb-tabset>
+                        <nb-tab tabTitle="Customer Details" tabIcon="list-outline" responsive>
+                            <div style="display: flex;">
+                                <div style="width: max-content;">
+                                    <img src="../../assets/user.svg" height="200px">
+                                </div>
+                                <div class="content">
+                                    <p><strong>Name:</strong> {{customer.name}}</p>
+                                    <p><strong>Email:</strong> {{customer.email}}</p>
+                                    <p><strong>Address:</strong> {{customer.address.street}}, {{customer.address.city}}</p>
+                                    <p><strong>Company:</strong> {{customer.company.name}}</p>
+                                    <p><strong>Website:</strong> {{customer.website}}</p>
+                                </div>
+                            </div>
+                        </nb-tab>
+                        <nb-tab tabTitle="Customer Orders" tabIcon="paper-plane-outline" responsive>
+                            <p>Customer Orders</p>
+                        </nb-tab>
+                    </nb-tabset>
+                    <div style="padding-top:25px;">
+                        <button nbButton shape="semi-round" fullWidth outline status="primary" size="medium" (click)="goBackToCustomerPage()"><nb-icon icon="arrow-back"></nb-icon> Go back</button>
+                    </div>
+                </div>
+                <ng-template #spinner>
+                    <nb-card size="large"[nbSpinner]="true" nbSpinnerSize="giant" nbSpinnerStatus="info">
+                    </nb-card>
+                </ng-template>
+          
+            </nb-card-body>
+          </nb-card>
+    </nb-layout-column>
+
+  </nb-layout>

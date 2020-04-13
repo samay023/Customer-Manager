@@ -5,7 +5,7 @@
             <nb-card-body>
               <nb-tabset>
                 <nb-tab tabTitle="Card View" tabIcon="person-outline" responsive>
-                    <nb-card accent="primary" style="cursor: pointer;" class="card-col" [routerLink]="['/customer/', customer.id]" *ngFor="let customer of customerList">
+                    <nb-card accent="primary" class="card-col" [routerLink]="['/customer/', customer.id]" *ngFor="let customer of customerList">
                         <nb-card-body>
                           <nb-user style="width: 240px;" shape="round" [name]="customer.name" [title]="customer.company.name"></nb-user>
                         </nb-card-body>

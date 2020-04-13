@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbUserModule, NbLayoutModule, NbSidebarModule, NbTabsetModule,
-  NbMenuModule, NbCardModule, NbProgressBarModule, NbListModule, NbBadgeModule } from '@nebular/theme';
+  NbMenuModule, NbCardModule, NbSpinnerModule, NbProgressBarModule, NbListModule, NbBadgeModule, NbIconModule, NbButtonModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CustomersComponent } from './customers/customers.component';
@@ -29,10 +29,13 @@ import { CustomerComponent } from './customer/customer.component';
     NbCardModule,
     NbListModule,
     NbTabsetModule,
+    NbSpinnerModule,
+    NbIconModule,
     NbUserModule,
     NbProgressBarModule,
     NbLayoutModule,
     NbBadgeModule,
+    NbButtonModule,
     NbEvaIconsModule
   ],
   providers: [],

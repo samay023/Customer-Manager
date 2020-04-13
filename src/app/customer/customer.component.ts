@@ -1,4 +1,9 @@
+import { CustomerService } from './../customers/customer.service';
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { switchMap, finalize } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { Customer } from '../customers/customers.component';
 
 @Component({
   selector: 'app-customer',
@@ -7,9 +12,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerComponent implements OnInit {
 
-  constructor() { }
+  customer$:Observable<Customer>;
+  loading:Boolean = true;
 
-  ngOnInit(): void {
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private service: CustomerService
+  ) {}
+
+  ngOnInit() {
+    this.customer$ = this.route.paramMap.pipe(
+      switchMap((params: ParamMap) =>
+        this.service.getCustomer(Number(params.get('id'))))
+    );
+    
   }
 
+  goBackToCustomerPage() {
+    this.router.navigate(['/customers']);
+  }
 }
