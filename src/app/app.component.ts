@@ -4,7 +4,7 @@ import { NbMenuItem } from '@nebular/theme';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'Customer-Manager';
@@ -13,12 +13,12 @@ export class AppComponent {
     {
       title: 'Dashboard',
       icon: 'home-outline',
-      link:'/dashboard'
+      link: '/dashboard',
     },
     {
       title: 'Customers',
       icon: 'people-outline',
-      link:'/customers'
+      link: '/customers',
     },
     {
       title: 'Orders (Pending)',
@@ -39,6 +39,6 @@ export class AppComponent {
     {
       title: 'Settings',
       icon: 'settings-2-outline',
-    }
+    },
   ];
 }

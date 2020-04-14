@@ -4,8 +4,22 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbUserModule, NbLayoutModule, NbSidebarModule, NbTabsetModule,
-  NbMenuModule, NbCardModule, NbSpinnerModule, NbProgressBarModule, NbListModule, NbBadgeModule, NbIconModule, NbButtonModule } from '@nebular/theme';
+import {
+  NbThemeModule,
+  NbUserModule,
+  NbLayoutModule,
+  NbSidebarModule,
+  NbTabsetModule,
+  NbMenuModule,
+  NbCardModule,
+  NbSpinnerModule,
+  NbProgressBarModule,
+  NbListModule,
+  NbBadgeModule,
+  NbIconModule,
+  NbTreeGridModule,
+  NbButtonModule,
+} from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CustomersComponent } from './customers/customers.component';
@@ -16,7 +30,7 @@ import { CustomerComponent } from './customer/customer.component';
     AppComponent,
     DashboardComponent,
     CustomersComponent,
-    CustomerComponent
+    CustomerComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,13 +46,14 @@ import { CustomerComponent } from './customer/customer.component';
     NbSpinnerModule,
     NbIconModule,
     NbUserModule,
+    NbTreeGridModule,
     NbProgressBarModule,
     NbLayoutModule,
     NbBadgeModule,
     NbButtonModule,
-    NbEvaIconsModule
+    NbEvaIconsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
